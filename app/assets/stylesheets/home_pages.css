@@ -1,0 +1,563 @@
+// Place all the styles related to the HomePages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+    font-family: 'NexaLight';
+    src: url('/fonts/nexalight/nexalight.eot');
+    src: url('/fonts/nexalight/nexalight.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/nexalight/nexalight.woff2') format('woff2'),
+         url('/fonts/nexalight/nexalight.woff') format('woff'),
+         url('/fonts/nexalight/nexalight.ttf') format('truetype'),
+         url('/fonts/nexalight/nexalight.svg#nexa_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'NexaBold';
+    src: url('/fonts/nexabold/nexabold.eot');
+    src: url('/fonts/nexabold/nexabold.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/nexabold/nexabold.woff2') format('woff2'),
+         url('/fonts/nexabold/nexabold.woff') format('woff'),
+         url('/fonts/nexabold/nexabold.ttf') format('truetype'),
+         url('/fonts/nexabold/nexabold.svg#nexa_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+nav {
+	height: 85px;
+	width: 100%;
+	background-color: transparent;
+	position: fixed;
+	padding-top: 20px;
+	padding-left: 50px;
+	z-index: 100;
+	-webkit-transition: background-color 700ms linear;
+    -moz-transition: background-color 700ms linear;
+    -o-transition: background-color 700ms linear;
+    -ms-transition: background-color 700ms linear;
+    transition: background-color 700ms linear;
+}
+
+nav.scrolled {
+	background-color: white;
+	box-shadow: 0 5px 5px -5px #333;
+}
+
+nav > ul {
+	width: 500px;
+	position: relative;
+	margin: -40px 0 0 180px;
+}
+
+nav > ul > li {
+	display: inline-block;
+	color: white;
+	font-style: sans-serif;
+	margin-right: 30px;
+	font-size: 18px;
+	font-family: NexaLight;
+	-webkit-transition: background-color 700ms linear;
+    -moz-transition: background-color 700ms linear;
+    -o-transition: background-color 700ms linear;
+    -ms-transition: background-color 700ms linear;
+    color: background-color 700ms linear;
+}
+
+nav.scrolled > ul > li {
+	color: #3ABF70;
+}
+
+
+.logo {
+	height: 50px;
+	width: 150px;
+	background-image: url('gm_logo1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.home-page-container {
+	height: 600px;
+	width: 100%;
+}
+
+.home-page-image {
+	position: absolute;
+	height: 650px;
+	width: 100%;
+	background-image: url('gohomephoto.jpg');
+	background-size: cover;
+	background-position: 60% 60%;
+	background-repeat: no-repeat;
+}
+
+.home-page-image > header {
+	position: relative;
+	height: 150px;
+	width: 600px;
+	text-align: center;
+	margin: 150px 0 0 40px;
+}
+
+#hero-header {
+	opacity: 0;
+	margin-top: 100px;
+}
+
+.home-page-image > header > h1 {
+	color: white;
+	font-family: NexaLight;
+	line-height: 45px;
+	font-size: 40px;
+}
+
+.home-page-image > header > h5 {
+	color: white;
+	font-family: NexaLight;
+}
+
+.call-to-action {
+	width: 500px;
+	position: relative;
+	margin: 10px 0 0 -18px;
+	padding-top: 10px;
+}
+
+.call-to-action > p {
+	color: white;
+	font-family: NexaLight;
+	font-size: 40px;
+	text-align: center;
+	color: #3ABF70;
+}
+
+.test-go-moment-container {
+	height: 180px;
+	width: 470px;
+	margin-left: 105px;
+	margin-top: 15px;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+}
+
+#test-go-moment {
+	position: relative;
+	width: 400px;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+#test-go-moment-input {
+	background-color: transparent;
+	color: #3ABF70;
+	height: 50px;
+	font-size: 20px;
+	border: 3px solid #3ABF70;
+}
+
+#test-go-moment-submit {
+	background-color: transparent;
+	color: white;
+	height: 50px;
+	font-size: 18px;
+	border: 3px solid #3ABF70;
+	background-color: #3ABF70;
+	border-left: none;
+}
+
+.product-summary {
+	height: 200px;
+	width: 100%;
+	background: linear-gradient(180deg, #ffffff, #f2f2f2);
+	border-bottom: 1px solid #ebebed;
+}
+
+.product-section {
+	height: 700px;
+	width: 100%;
+	border-bottom: 1px solid #ebebed;
+	overflow: hidden;
+	background: linear-gradient(180deg, #ffffff, #f2f2f2);
+}
+
+.product-overview {
+	height: 120px;
+	width: 800px;
+	text-align: center;
+	position: relative;
+	margin: 120px auto 0 auto;
+}
+
+.product-overview > header > h2 {
+	font-family: NexaBold;
+	font-size: 30px;
+	color: #3ABF70;
+}
+
+.product-overview > p {
+	width: 400px;
+	position: relative;
+	margin: 0 auto;
+	font-family: NexaLight;
+	font-size: 20px;
+}
+
+.sell-point-container {
+	width: 1000px;
+	height: 600px;
+	position: relative;
+	margin: 100px auto 0 auto;
+}
+
+#sell-container {
+	margin-top: 50px;
+	padding-left: 150px;
+}
+
+#sell-point-1 {
+	margin: -300px 0 0 300px;
+	width: 400px;
+	opacity: 0;
+}
+
+#sell-point-1 > p {
+	text-align: center;
+	font-size: 18px;
+}
+
+.iphone-image {
+	height: 640px;
+	width: 350px;
+	background-image: url('gophone6.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -50px;
+	margin-left: -100px;
+	opacity: 0;
+}
+
+.iphone-gomoment-image {
+	height: 402px;
+	width: 225px;
+	margin: -521px 0 0 -30px;
+	background-image: url('gochat.png');
+	background-size: contain;
+	opacity: 0;
+}
+
+.imac-image {
+	position: relative;
+	height: 450px;
+	width: 550px;
+	margin: 20px 0 0 -30px;
+	background-image: url('gomac.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0; 
+}
+
+.imac-gomoment-image {
+	height: 290px;
+	width: 505px;
+	margin: -428px 0 0 -7px;
+	background-image: url('messages.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0;
+}
+
+#imac-gomoment-image-2 {
+	background-image: url('dash2.png');
+}
+
+.sell-point {
+	height: 300px;
+	width: 400px;
+	text-align: center;
+	position: relative;
+	margin: -250px 0 0 600px;
+}
+
+#sell-point-2 {
+	opacity: 0;
+	margin-top: -200px;
+}
+
+#sell-point-p-2 {
+	text-align: center;
+	font-size: 18px;
+}
+
+.sell-point > header > h2 {
+	font-family: NexaBold;
+	font-size: 30px;
+	color: #3ABF70;
+}
+
+.sell-point > p {
+	font-family: NexaLight;
+	text-align: left;
+}
+
+.demo-input {
+	padding: 20px;
+	padding-bottom: 0px;
+	background-color: #fff;
+	background-color: rgba(000,000,000,0.4);
+}
+
+.learn-more {
+	height: 85px;
+}
+
+#learn-more-1 {
+	position: relative;
+	margin-top: 15px;
+	padding-top: 25px;
+	background-color: #3ABF70;
+	width: 100%;
+	text-align: center;
+	-webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; 
+}
+
+#learn-more-1:hover {
+	background-color: black;
+}
+
+#learn-more-1:hover > a {
+	color: #3ABF70;
+}
+
+#learn-more-2 {
+	position: relative;
+	margin-top: -86px;
+	padding-top: 25px;
+	background-color: #3ABF70;
+	width: 100%;
+	text-align: center;
+	-webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+#learn-more-2:hover {
+	background-color: black;
+}
+
+#learn-more-2:hover > a {
+	color: #3ABF70;
+}
+
+.learn-more > a {
+	color: white;
+	font-size: 25px;
+	font-family: NexaLight;
+	-webkit-transition: color 200ms linear;
+    -moz-transition: color 200ms linear;
+    -o-transition: color 200ms linear;
+    -ms-transition: color 200ms linear;
+    transition: color 200ms linear;
+}
+
+.clients-section {
+	height: 700px;
+	width: 100%;
+	background: linear-gradient(180deg, #ffffff, #f2f2f2);
+}
+
+.clients-section > header {
+	text-align: center;
+	margin-top: 80px;
+}
+
+.clients-section > header > h2 {
+	color: #3ABF70;
+	font-family: NexaBold;
+}
+
+.logo-container {
+	width: 1050px;
+	height: 451px;
+	overflow: auto;
+	margin: 60px auto 0 auto;
+	background: rgba(0,0,0,0.2);
+	padding-top: 25px;
+}
+
+.logo-container > ul {
+	width: 1025px;
+	margin-top: -5px;
+}
+
+.logo-container > ul > li {
+	list-style: none;
+	height: 200px;
+	width: 200px;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#logo-second-row {
+	margin-top: -23px;
+}
+
+.logo-container > ul > li:nth-child(1) {
+	background-image: url('line.jpeg');
+}
+
+.logo-container > ul > li:nth-child(2) {
+	background-image: url('sheraton.png');
+}
+
+.logo-container > ul > li:nth-child(3) {
+	background-image: url('fairfield.jpg');
+}
+
+.logo-container > ul > li:nth-child(4) {
+	background-image: url('best_western.jpg');
+}
+
+.logo-container > ul > li:nth-child(5) {
+	background-image: url('Wyndham201.png');
+}
+
+#logo-second-row > li:nth-child(1) {
+	background-image: url('crowne.jpg');
+}
+
+#logo-second-row > li:nth-child(2) {
+	background-image: url('hilton.jpg');
+}
+
+#logo-second-row > li:nth-child(3) {
+	background-image: url('holiday_inn.gif');
+	background-color: white;
+}
+
+#logo-second-row > li:nth-child(4) {
+	background-image: url('double.gif');
+}
+
+#logo-second-row > li:nth-child(5) {
+	background-image: url('hampton.jpg');
+}
+
+.product-features-container {
+	height: 450px;
+	width: 900px;
+	margin: 40px auto 0 auto;
+}
+
+.product-features-container > ul {
+	margin: 0 auto;
+}
+
+.small-block-grid-3 {
+	width: 665px;
+	margin: 0 auto;
+}
+
+.product-feature-header {
+	text-align: center;
+	margin-top: 100px;
+}
+
+.product-feature-header > h2 {
+	font-family: NexaBold;
+	color: #3ABF70;
+}
+
+.feature-container {
+	height: 200px;
+	width: 200px;
+	/*border: 1px solid black;*/
+	overflow: hidden;
+	background-color: #D3D3D3;
+	-webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.feature-container:hover {
+	background-color: #3ABF70;
+}
+
+.feature-description {
+	height: 50px;
+	width: 100%;
+	background-color: black;
+	margin-top: -50px;
+	text-align: center;
+	color: white;
+	font-family: NexaLight;
+	padding-top: 13px;
+	-webkit-transition: margin-top 200ms linear;
+    -moz-transition: margin-top 200ms linear;
+    -o-transition: margin-top 200ms linear;
+    -ms-transition: margin-top 200ms linear;
+    transition: margin-top 200ms linear;
+}
+
+.feature-description > p {
+	font-size: 15px;
+}
+
+.feature-description.hovered {
+	margin-top: 0px;
+}
+
+.feature-icon {
+	height: 50px;
+	width: 50px;
+	/*border: 1px solid black;*/
+	margin-top: 80px;
+	margin-left: 75px;
+	background-size: contain;
+}
+
+#data {
+	background-image: url('fi-graph-trend.svg');
+}
+
+#requests {
+	background-image: url('fi-results-demographics.svg');
+}
+
+#realtime {
+	background-image: url('fi-widget.svg'); 
+}
+
+#dashboard {
+	background-image: url('fi-graph-bar.svg');
+}
+
+#auto {
+	background-image: url('fi-check.svg');
+}
+
+#reports {
+	background-image: url('fi-page-export.svg');
+}
+
+
+
+
+
+
+
+
+
