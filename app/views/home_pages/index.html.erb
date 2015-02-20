@@ -1,4 +1,4 @@
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Go Moment</title>
@@ -9,16 +9,17 @@
       <nav>
         <div class="logo"></div>
         <ul>
-          <li>About</li>
-          <li>Product</li>
-          <li>Contact</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#features">Features</a></li>
         </ul>
       </nav>
       <header id="hero-header">
         <h1>"This brings us closer than ever to our guests"</h1>
         <h5>-Area General Manager</h5>
       </header>
-      <div class="test-go-moment-container">
+    <!--   <div class="test-go-moment-container">
         <div class="call-to-action">
           <p>See for yourself</p>
         </div>
@@ -34,9 +35,10 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
+  <div id="about"></div>
   <div class="product-summary">
     <div class="product-overview">
       <header>
@@ -44,11 +46,15 @@
       </header>
       <p>Reach and delight guests instantly.</p>
     </div>
+    <div id="product"></div>
   </div>
   <div class="product-section">
     <div class="sell-point-container" id="sell-container">
       <div class="iphone-image"></div>
       <div class="iphone-gomoment-image"></div>
+      <div class="iphone-gomoment-demo-overlay" data-reveal-id="myModal1">
+        <p id="demo-overlay-1">Request A Demo</p>
+      </div>
       <div class="sell-point" id="sell-point-1">
         <header>
           <h2>Communicate Simply</h2>
@@ -60,23 +66,34 @@
       <a href="#" data-reveal-id="myModal1">Request A Demo</a>
     </div>
     <div id="myModal1" class="reveal-modal" data-reveal>
-      <form>
-        <div class="row">
-          <div class="medium-12 columns">
-            <label>Name
-              <input type="text" placeholder="First and Last Name" />
-            </label>
+      <div class="modal-selling-points">
+        <h1>Ready to increase RevPAR on autopilot?</h1>
+        <ul>
+          <li>Increase guest loyalty</li>
+          <li>Improve guest satisfaction</li>
+          <li>Beat the competition on TripAdvisor</li>
+        </ul>
+      </div>
+      <form id="form2">
+        <div class="row collapse">
+          <div class="small-3 large-2 columns">
+            <span id="modal-label" class="prefix">Name</span>
+          </div>
+          <div class="small-9 large-10 columns">
+            <input type="text" id="name1" placeholder="Enter your full name...">
           </div>
         </div>
-        <div class="row">
-          <div class="medium-12 columns">
-            <label>Email
-              <input type="text" placeholder="Email" />
-            </label>
+        <div class="row collapse">
+          <div class="small-3 large-2 columns">
+            <span id="modal-label" class="prefix">Email</span>
+          </div>
+          <div class="small-9 large-10 columns">
+            <input type="text" id="email1" placeholder="Enter your email...">
           </div>
         </div>
+        <a onClick="prepInfo1()" href="#" class="button expand close-reveal-modal" id="modal-submit">Request Demo</a>
+        <a class="close-reveal-modal">&#215;</a>
       </form>
-      <a class="close-reveal-modal">&#215;</a>
     </div>
   </div>
   <div class="product-section">
@@ -89,30 +106,45 @@
         </header>
         <p id="sell-point-p-2">Automated guest service personalization, improve your guest experience, and unlock new revenue.</p>
       </div>
+      <div class="imac-gomoment-demo-overlay" data-reveal-id="myModal2">
+        <p>Request A Demo</p>
+      </div>
     </div>
     <div class="learn-more" id="learn-more-2">
         <a href="#" data-reveal-id="myModal2">Request A Demo</a>
     </div>
     <div id="myModal2" class="reveal-modal" data-reveal>
-      <form>
-        <div class="row">
-          <div class="medium-12 columns">
-            <label>Name
-              <input type="text" placeholder="First and Last Name" />
-            </label>
+      <div class="modal-selling-points">
+        <h1>Ready to increase RevPAR on autopilot?</h1>
+        <ul>
+          <li>Increase guest loyalty</li>
+          <li>Improve guest satisfaction</li>
+          <li>Beat the competition on TripAdvisor</li>
+        </ul>
+      </div>
+      <form id="form2">
+        <div class="row collapse">
+          <div class="small-3 large-2 columns">
+            <span id="modal-label" class="prefix">Name</span>
+          </div>
+          <div class="small-9 large-10 columns">
+            <input type="text" id="name2" placeholder="Enter your full name...">
           </div>
         </div>
-        <div class="row">
-          <div class="medium-12 columns">
-            <label>Email
-              <input type="text" placeholder="Email" />
-            </label>
+        <div class="row collapse">
+          <div class="small-3 large-2 columns">
+            <span id="modal-label" class="prefix">Email</span>
+          </div>
+          <div class="small-9 large-10 columns">
+            <input type="text" id="email2" placeholder="Enter your email...">
           </div>
         </div>
+        <a onClick="prepInfo2()" href="#" class="button expand close-reveal-modal" id="modal-submit">Request Demo</a>
+        <a class="close-reveal-modal">&#215;</a>
       </form>
-      <a class="close-reveal-modal">&#215;</a>
     </div>
   </div>
+  <div id="clients"></div>
   <div class="clients-section">
     <header>
       <h2>Trusted by leading hotels & brands</h2>
@@ -134,6 +166,7 @@
       </ul>
     </div>  
   </div>
+  <div id="features"></div>
   <div class="product-section">
     <header class="product-feature-header">
       <h2>Product Features</h2>
@@ -208,5 +241,11 @@
   $(document).foundation();
 
   </script>
+
+  <style>
+    .reveal-modal-bg {
+      position: fixed;
+    }
+  </style>
     
   </body>
