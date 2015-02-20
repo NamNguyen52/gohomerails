@@ -18,6 +18,7 @@ gem 'foundation-rails'
 gem 'mail_form'
 gem 'simple_form'
 gem 'twilio-ruby'
+gem 'rails_12factor'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
