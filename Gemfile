@@ -19,6 +19,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'twilio-ruby'
 gem 'rails_12factor'
+gem 'pg'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
