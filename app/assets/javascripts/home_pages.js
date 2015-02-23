@@ -1,7 +1,3 @@
-$('#demo-one').click(function(){
-	$(this).removeClass('button');
-	$(this).addClass('close-reveal-modal');
-});
 
 $(document).scroll(function(){
     var y = $(this).scrollTop();
@@ -15,31 +11,17 @@ $(document).scroll(function(){
 });
 
 $(document).ready(function(){
-
 	$('#hero-header').animate({'opacity':'1', 'margin-top':'150px'}, 700);
 
 	setTimeout(function() {
       $('.test-go-moment-container').animate({'opacity':'1', 'margin-top':'65px'}, 500);
 	}, 1700);
+
+  $('.sell-point-container').addClass('hidden').viewportChecker({
+    classToAdd: 'visible animated fadeInLeft',
+    offset: 100
+  });
 });
-
-// $(window).scroll(function(){
-
-// 	if ($(this).scrollTop() > 600) {
-// 		$('.iphone-image').animate({'opacity':'1', 'margin-left':'-50px'}, 500);
-// 		$('.iphone-gomoment-image').animate({'opacity':'1', 'margin-left':'20px'}, 500);
-// 		$('#sell-point-1').animate({'opacity':'1','margin-top':'-350px'}, 500);
-// 	}
-// });
-
-// $(window).scroll(function(){
-
-// 	if ($(this).scrollTop() > 1270) {
-// 		$('.imac-image').animate({'opacity':'1','margin-left':'20px'}, 800);
-// 		$('.imac-gomoment-image').animate({'opacity':'1','margin-left':'43px'}, 800);
-// 		$('#sell-point-2').animate({'opacity':'1', 'margin-top':'-250px'}, 800);
-// 	}
-// });
 
 $(document).ready(function() {
   function filterPath(string) {
@@ -120,6 +102,22 @@ function sendEmail(emailObj) {
 			console.log('failure');
 		}
 	});
+}
+
+function demoMessage() {
+  var num = document.getElementById('test-go-moment-input').value;
+  $.ajax({
+    type: 'POST',
+    url: '/demo',
+    data: 'number=' + num,
+    success: function(json) {
+      console.log('success');
+    },
+    failure: function() {
+      console.log('failure');
+    }
+  });
+  document.getElementById('test-go-moment-input').value = "Thank you!";
 }
 
 

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/contacts', to: 'contacts#new'
   post '/send_email' => 'contacts#send_email'
+  post '/demo' => 'home_pages#demo'
+  post '/response' => 'home_pages#response'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
