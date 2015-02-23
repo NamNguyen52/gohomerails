@@ -60,7 +60,7 @@ nav > ul > li {
 	font-style: sans-serif;
 	margin-right: 30px;
 	font-size: 18px;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	-webkit-transition: background-color 700ms linear;
     -moz-transition: background-color 700ms linear;
     -o-transition: background-color 700ms linear;
@@ -119,14 +119,14 @@ nav.scrolled > ul > li > a {
 
 .home-page-image > header > h1 {
 	color: white;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	line-height: 45px;
 	font-size: 40px;
 }
 
 .home-page-image > header > h5 {
 	color: white;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 }
 
 .call-to-action {
@@ -138,7 +138,7 @@ nav.scrolled > ul > li > a {
 
 .call-to-action > p {
 	color: white;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	font-size: 40px;
 	text-align: center;
 	color: #3ABF70;
@@ -226,7 +226,7 @@ nav.scrolled > ul > li > a {
 }
 
 .product-overview > header > h2 {
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	font-size: 30px;
 	color: #3ABF70;
 }
@@ -235,7 +235,7 @@ nav.scrolled > ul > li > a {
 	width: 400px;
 	position: relative;
 	margin: 0 auto;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	font-size: 20px;
 }
 
@@ -308,7 +308,7 @@ nav.scrolled > ul > li > a {
 
 .iphone-gomoment-demo-overlay > p {
 	color: white;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	font-size: 25px;
 	width: 200px;
 	text-align: center;
@@ -369,7 +369,7 @@ nav.scrolled > ul > li > a {
 .imac-gomoment-demo-overlay > p {
 	text-align: center;
 	font-size: 25px;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	color: white;
 	opacity: 0;
 	height: 100%;
@@ -413,13 +413,13 @@ nav.scrolled > ul > li > a {
 }
 
 .sell-point > header > h2 {
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	font-size: 30px;
 	color: #3ABF70;
 }
 
 .sell-point > p {
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	text-align: left;
 }
 
@@ -481,7 +481,7 @@ nav.scrolled > ul > li > a {
 .learn-more > a {
 	color: white;
 	font-size: 25px;
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	-webkit-transition: color 200ms linear;
     -moz-transition: color 200ms linear;
     -o-transition: color 200ms linear;
@@ -511,7 +511,7 @@ nav.scrolled > ul > li > a {
 }
 
 .modal-selling-points > h1 {
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	font-size: 40px;
 	text-align: center;
 	color: #3ABF70;
@@ -520,7 +520,7 @@ nav.scrolled > ul > li > a {
 }
 
 .modal-selling-points > ul > li {
-	font-family: ""S"ource Sans Pro""";
+	font-family: "Source Sans Pro";
 	font-size: 20px;
 }
 
@@ -554,7 +554,7 @@ nav.scrolled > ul > li > a {
 	border-right: none;
 	color: white;
 	background: #3ABF70;
-	font-family: "S"ource Sans Pro"";
+	font-family: "Source Sans Pro";
 	font-size: 18px;
 	height: 50px;
 }
