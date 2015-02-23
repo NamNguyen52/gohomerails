@@ -834,7 +834,6 @@ footer {
 }
 
 .tweet {
-	/*border: 1px solid black;*/
 	margin: 0 auto;
 	padding-top: 20px;
 	height: 150px;
@@ -849,13 +848,14 @@ footer {
 	height: 50px;
 	width: 100%;
 	background-color: black;
+	padding-top: 10px;
 }
 
 .footer-info > p {
 	color: #3ABF70;
 	font-family: Source Sans Pro;
 	text-align: center;
-	padding-top: 10px;
+	margin-bottom: -10px;
 }
 
 
