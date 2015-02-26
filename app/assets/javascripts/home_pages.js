@@ -1,4 +1,4 @@
-
+// nav scroll animation fadein/fadeout
 $(document).scroll(function(){
     var y = $(this).scrollTop();
 
@@ -10,6 +10,7 @@ $(document).scroll(function(){
 
 });
 
+// page load animations and scroll animation triggers
 $(document).ready(function(){
 	$('#hero-header').animate({'opacity':'1', 'margin-top':'150px'}, 700);
 
@@ -51,7 +52,6 @@ $(document).ready(function() {
     }
   });
  
-  // use the first element that is "scrollable"
   function scrollableElement(els) {
     for (var i = 0, argLength = arguments.length; i <argLength; i++) {
       var el = arguments[i],
@@ -69,9 +69,9 @@ $(document).ready(function() {
     }
     return [];
   }
- 
 });
 
+// form data capture for first modal dropdown
 function prepInfo1() {
 	var name = document.getElementById('name1').value;
 	var email = document.getElementById('email1').value;
@@ -81,6 +81,7 @@ function prepInfo1() {
 	sendEmail(emailObj);
 }
 
+// form data capture for second modal dropdown
 function prepInfo2() {
 	var name = document.getElementById('name2').value;
 	var email = document.getElementById('email2').value;
@@ -90,6 +91,7 @@ function prepInfo2() {
 	sendEmail(emailObj);
 }
 
+// jQuery AJAX POST form data to mailer
 function sendEmail(emailObj) {
 	$.ajax({
 		type: 'POST',
@@ -104,23 +106,21 @@ function sendEmail(emailObj) {
 	});
 }
 
-function demoMessage() {
-  var num = document.getElementById('test-go-moment-input').value;
-  $.ajax({
-    type: 'POST',
-    url: '/demo',
-    data: 'number=' + num,
-    success: function(json) {
-      console.log('success');
-    },
-    failure: function() {
-      console.log('failure');
-    }
-  });
-  document.getElementById('test-go-moment-input').value = "Thank you!";
+function testGo() {
+	var guestNumber = document.getElementById('test-go-moment-input').value;
+	$.ajax({
+		method: 'POST',
+		url: 'http://revone-staging.herokuapp.com/app/guests',
+		data: "guest[mobile_number]=" + guestNumber + "&guest[name]=test&visit[hotel_id]=2",
+		success: function() {
+			console.log('success');
+      document.getElementById('test-go-moment-input').value="Thank You!"
+		},
+		failure: function() {
+			console.log('fail');
+		}
+	});
 }
-
-
 
 
 
