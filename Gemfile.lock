@@ -164,7 +164,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   simple_form
   spring
-  sqlite3
   turbolinks
   twilio-ruby
   twitter (~> 5.14.0)
