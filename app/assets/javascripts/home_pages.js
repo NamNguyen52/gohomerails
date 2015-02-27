@@ -110,8 +110,8 @@ function testGo() {
 	var guestNumber = document.getElementById('test-go-moment-input').value;
 	$.ajax({
 		method: 'POST',
-		url: 'http://revone-staging.herokuapp.com/app/guests',
-		data: "guest[mobile_number]=" + guestNumber + "&guest[name]=test&visit[hotel_id]=2",
+		url: 'http://rev1.gomoment.com/app/guests',
+		data: "guest[mobile_number]=" + guestNumber + "&guest[name]=homepage&visit[hotel_id]=100",
 		success: function() {
 			console.log('success');
       document.getElementById('test-go-moment-input').value="Thank You!"
