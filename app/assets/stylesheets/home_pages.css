@@ -2,30 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@font-face {
-    font-family: 'NexaBold';
-    src: url('/fonts/nexabold/nexabold.eot');
-    src: url('/fonts/nexabold/nexabold.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/nexabold/nexabold.woff2') format('woff2'),
-         url('/fonts/nexabold/nexabold.woff') format('woff'),
-         url('/fonts/nexabold/nexabold.ttf') format('truetype'),
-         url('/fonts/nexabold/nexabold.svg#nexa_boldregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+@import url("//hello.myfonts.net/count/2d3f2a");
 
+  
+@font-face {
+	font-family: 'Novecento';
+	src: url('../fonts/2D3F2A_0_0.eot');
+	src: url('../fonts/2D3F2A_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2D3F2A_0_0.woff2') format('woff2'),url('../fonts/2D3F2A_0_0.woff') format('woff'),url('../fonts/2D3F2A_0_0.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'NexaLight';
-    src: url('/fonts/nexalight/nexalight.eot');
-    src: url('/fonts/nexalight/nexalight.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/nexalight/nexalight.woff2') format('woff2'),
-         url('/fonts/nexalight/nexalight.woff') format('woff'),
-         url('/fonts/nexalight/nexalight.ttf') format('truetype'),
-         url('/fonts/nexalight/nexalight.svg#nexa_lightregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+	font-family: 'Museo';
+	src: url('../fonts/Museo300-Regular.otf');
 }
 
 nav {
@@ -98,7 +86,7 @@ nav.scrolled > ul > li > a {
 	position: absolute;
 	height: 650px;
 	width: 100%;
-	background-image: url('gohomephoto2.jpg');
+	background-image: url("gohomephoto2.jpg");
 	background-size: cover;
 	background-position: 60% 60%;
 	background-repeat: no-repeat;
@@ -120,13 +108,8 @@ nav.scrolled > ul > li > a {
 .home-page-image > header > h1 {
 	color: white;
 	font-family: Source Sans Pro;
-	line-height: 45px;
-	font-size: 40px;
-}
-
-.home-page-image > header > h5 {
-	color: white;
-	font-family: Source Sans Pro;
+	line-height: 60px;
+	font-size: 3em;
 }
 
 .call-to-action {
@@ -134,12 +117,20 @@ nav.scrolled > ul > li > a {
 	position: relative;
 	margin: 10px 0 0 -18px;
 	padding-top: 10px;
+	-webkit-transition: margin 200ms linear;
+    -moz-transition: margin 200ms linear;
+    -o-transition: margin 200ms linear;
+    -ms-transition: margin 200ms linear;
+    transition: margin 200ms linear;
 }
 
+.call-to-action.clicked {
+	margin: 10px 0 0 -380px;
+}
 .call-to-action > p {
 	color: white;
 	font-family: Source Sans Pro;
-	font-size: 40px;
+	font-size: 35px;
 	text-align: center;
 	color: #3ABF70;
 }
@@ -151,7 +142,7 @@ nav.scrolled > ul > li > a {
 	margin-top: 15px;
 	background-color: rgba(0,0,0,0.5);
 	opacity: 0;
-	text-align: center;
+	overflow: hidden;
 }
 
 #test-go-moment {
@@ -163,43 +154,54 @@ nav.scrolled > ul > li > a {
 
 #test-go-moment-input {
 	background-color: transparent;
-	color: white;
+	color: #3ABF70;
 	height: 50px;
 	font-size: 20px;
 	border: 3px solid #3ABF70;
 }
 
 #test-go-moment-submit {
-	background-color: transparent;
 	color: white;
 	height: 50px;
-	font-size: 18px;
+	font-size: 16px;
 	border: 3px solid #3ABF70;
 	background-color: #3ABF70;
 	border-left: none;
-	padding-top: 3px;
-	-webkit-transition: all 100ms linear;
-    -moz-transition: all 100ms linear;
-    -o-transition: all 100ms linear;
-    -ms-transition: all 100ms linear;
-    transition: all 100ms linear;
-}
-
-#test-go-moment-submit:hover {
-	background-color: black;
+	font-family: Source Sans Pro;
+	padding-top: 2px;
+	font-size: 20px;
+	width: 100px;
 }
 
 #test-go-moment-submit > a {
 	color: white;
-	-webkit-transition: all 100ms linear;
-    -moz-transition: all 100ms linear;
-    -o-transition: all 100ms linear;
-    -ms-transition: all 100ms linear;
-    transition: all 100ms linear; 
 }
 
 #test-go-moment-submit > a:hover {
-	color: #3ABF70;
+	color: black;
+}
+
+.test-confirmation-container {
+	height: 80px;
+	width: 440px;
+	float: right;
+	margin: -110px -440px 0 0;
+	padding-top: 10px;
+	-webkit-transition: margin 200ms linear;
+    -moz-transition: margin 200ms linear;
+    -o-transition: margin 200ms linear;
+    -ms-transition: margin 200ms linear;
+    transition: margin 200ms linear;
+}
+
+.test-confirmation-container.clicked {
+	margin: -110px 8px 0px 0px;
+}
+
+.test-confirmation-container > p {
+	font-family: Source Sans Pro;
+	font-size: 30px;
+	color: white;
 }
 
 .product-summary {
@@ -222,7 +224,7 @@ nav.scrolled > ul > li > a {
 	width: 800px;
 	text-align: center;
 	position: relative;
-	margin: 120px auto 0 auto;
+	margin: 100px auto 30px auto;
 }
 
 .product-overview > header > h2 {
@@ -251,8 +253,6 @@ nav.scrolled > ul > li > a {
     transition: all 3000ms linear;
 }
 
-/* classes to add for animation on .sell-point-container */
-
 .hidden {
 	opacity: 0;
 }
@@ -262,13 +262,14 @@ nav.scrolled > ul > li > a {
 }
 
 #sell-container {
-	margin-top: 50px;
+	margin-top: 100px;
 	padding-left: 150px;
 }
 
 #sell-point-1 {
-	margin: -300px 0 0 300px;
+	margin: -350px 0 0 300px;
 	width: 400px;
+	opacity: 1;
 }
 
 #sell-point-1 > p {
@@ -284,14 +285,16 @@ nav.scrolled > ul > li > a {
 	background-repeat: no-repeat;
 	margin-top: -50px;
 	margin-left: -50px;
+	opacity: 1;
 }
 
 .iphone-gomoment-image {
 	height: 402px;
 	width: 225px;
 	margin: -521px 0 0 20px;
-	background-image: url('gochat.png');
+	background-image: url('gochat2.gif');
 	background-size: contain;
+	opacity: 1;
 }
 
 .iphone-gomoment-demo-overlay {
@@ -306,7 +309,7 @@ nav.scrolled > ul > li > a {
     transition: all 200ms linear; 
 }
 
-.iphone-gomoment-demo-overlay > p {
+.iphone-gomoment-demo-overlay > a > p {
 	color: white;
 	font-family: Source Sans Pro;
 	font-size: 25px;
@@ -324,12 +327,16 @@ nav.scrolled > ul > li > a {
     transition: all 200ms linear;
 }
 
-.iphone-gomoment-demo-overlay > p:hover {
+.iphone-gomoment-demo-overlay > a > p:hover {
 	opacity: 1;
 } 
 
 .iphone-gomoment-demo-overlay:hover {
 	background-color: rgba(0,0,0,0.7);
+}
+
+#product-section-2 {
+	height: 625px;
 }
 
 .imac-image {
@@ -347,7 +354,7 @@ nav.scrolled > ul > li > a {
 	height: 290px;
 	width: 505px;
 	margin: -428px 0 0 43px;
-	background-image: url('messages.png');
+	background-image: url('dash3.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	opacity: 1;
@@ -366,7 +373,7 @@ nav.scrolled > ul > li > a {
     transition: all 200ms linear; 
 }
 
-.imac-gomoment-demo-overlay > p {
+.imac-gomoment-demo-overlay > a > p {
 	text-align: center;
 	font-size: 25px;
 	font-family: Source Sans Pro;
@@ -382,7 +389,7 @@ nav.scrolled > ul > li > a {
     transition: all 200ms linear;
 }
 
-.imac-gomoment-demo-overlay > p:hover {
+.imac-gomoment-demo-overlay > a > p:hover {
 	opacity: 1;
 }
 
@@ -390,8 +397,9 @@ nav.scrolled > ul > li > a {
 	background-color: rgba(0,0,0,0.7);
 }
 
+
 #imac-gomoment-image-2 {
-	background-image: url('dash2.png');
+	background-image: url('dash3.png');
 }
 
 .sell-point {
@@ -432,12 +440,24 @@ nav.scrolled > ul > li > a {
 
 .learn-more {
 	height: 85px;
+	font-family: Source Sans Pro;
+	font-size: 25px;
+	color: white;
+	-webkit-transition: color 200ms linear;
+    -moz-transition: color 200ms linear;
+    -o-transition: color 200ms linear;
+    -ms-transition: color 200ms linear;
+    transition: color 200ms linear; 
+}
+
+.learn-more:hover {
+	color: #3ABF70;
 }
 
 #learn-more-1 {
 	position: relative;
 	margin-top: 15px;
-	padding-top: 25px;
+	padding-top: 22px;
 	background-color: #3ABF70;
 	width: 100%;
 	text-align: center;
@@ -458,7 +478,7 @@ nav.scrolled > ul > li > a {
 
 #learn-more-2 {
 	position: relative;
-	margin-top: -86px;
+	margin-top: 55px;
 	padding-top: 25px;
 	background-color: #3ABF70;
 	width: 100%;
@@ -512,11 +532,15 @@ nav.scrolled > ul > li > a {
 
 .modal-selling-points > h1 {
 	font-family: Source Sans Pro;
-	font-size: 40px;
+	font-size: 2.5em;
 	text-align: center;
 	color: #3ABF70;
 	line-height: 40px;
 	margin-bottom: 20px;
+}
+
+.modal-selling-points > ul {
+	padding-left: 40px;
 }
 
 .modal-selling-points > ul > li {
@@ -580,8 +604,49 @@ nav.scrolled > ul > li > a {
 	color: #3ABF70;
 }
 
+/*.reveal-modal {
+	width: 500px;
+	height: 225px;
+}*/
+
+#modal-input {
+	border: 2px solid #3ABF70;
+	border-left: none;
+	height: 40px;
+}
+
+/*#modal-label {
+	border: 2px solid #3ABF70;
+	border-right: none;
+	color: white;
+	background: #3ABF70;
+	font-family: Source Sans Pro;
+	font-size: 18px;
+	height: 40px;
+}*/
+
+/*#modal-submit {
+	width: 437px;
+	height: 50px;
+	font-size: 20px;
+	margin: 132px 9px 0 0;
+	background: #3ABF70;
+	color: white;
+	font-family: Source Sans Pro;
+	-webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}*/
+
+/*#modal-submit:hover {
+	background: black;
+	color: #3ABF70;
+}*/
+
 .clients-section {
-	height: 700px;
+	height: 650px;
 	width: 100%;
 	background: linear-gradient(180deg, #ffffff, #f2f2f2);
 }
@@ -635,6 +700,9 @@ nav.scrolled > ul > li > a {
 
 .logo-container > ul > li:nth-child(1) {
 	background-image: url('line.jpeg');
+}
+
+#line-size {
 	background-size: 200px 200px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -642,6 +710,9 @@ nav.scrolled > ul > li > a {
 
 .logo-container > ul > li:nth-child(2) {
 	background-image: url('sheraton.png');
+}
+
+#sheraton-size {
 	background-size: 150px 150px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -649,6 +720,9 @@ nav.scrolled > ul > li > a {
 
 .logo-container > ul > li:nth-child(3) {
 	background-image: url('fairfield.jpg');
+}
+
+#fairfield-size {
 	background-size: 200px 200px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -656,6 +730,9 @@ nav.scrolled > ul > li > a {
 
 .logo-container > ul > li:nth-child(4) {
 	background-image: url('best_western.jpg');
+}
+
+#best-west-size {
 	background-size: 130px 130px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -663,6 +740,9 @@ nav.scrolled > ul > li > a {
 
 .logo-container > ul > li:nth-child(5) {
 	background-image: url('Wyndham201.png');
+}
+
+#wyndham-size {
 	background-size: 160px 160px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -670,6 +750,9 @@ nav.scrolled > ul > li > a {
 
 #logo-second-row > li:nth-child(1) {
 	background-image: url('crowne.jpg');
+}
+
+#crowne-size {
 	background-size: 165px 165px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -677,6 +760,9 @@ nav.scrolled > ul > li > a {
 
 #logo-second-row > li:nth-child(2) {
 	background-image: url('hilton.jpg');
+}
+
+#hilton-size {
 	background-size: 200px 200px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -684,6 +770,10 @@ nav.scrolled > ul > li > a {
 
 #logo-second-row > li:nth-child(3) {
 	background-image: url('embassy.jpg');
+	background-color: white;
+}
+
+#embassy-size {
 	background-size: 130px 130px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -691,6 +781,9 @@ nav.scrolled > ul > li > a {
 
 #logo-second-row > li:nth-child(4) {
 	background-image: url('double.gif');
+}
+
+#double-tree-size {
 	background-size: 160px 160px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -698,6 +791,9 @@ nav.scrolled > ul > li > a {
 
 #logo-second-row > li:nth-child(5) {
 	background-image: url('hampton.jpg');
+}
+
+#hampton-size {
 	background-size: 160px 160px;
 	background-position: 50% 50%;
 	background-color: white;
@@ -707,13 +803,11 @@ nav.scrolled > ul > li > a {
 	height: 450px;
 	width: 900px;
 	margin: 40px auto 0 auto;
-}
-
-.product-features-container > ul {
-	margin: 0 auto;
+	/*border: 1px solid black;*/
 }
 
 .small-block-grid-3 {
+	/*border: 1px solid black;*/
 	width: 665px;
 	margin: 0 auto;
 }
@@ -750,7 +844,7 @@ nav.scrolled > ul > li > a {
 	width: 100%;
 	background-color: black;
 	text-align: center;
-	color: white;
+	color: #3ABF70;
 	font-family: Source Sans Pro;
 	padding-top: 13px;
 	-webkit-transition: all 200ms linear;
@@ -760,22 +854,13 @@ nav.scrolled > ul > li > a {
     transition: all 200ms linear;
 }
 
-.feature-description > p {
-	font-size: 15px;
-	color: #3ABF70;
-	-webkit-transition: all 200ms linear;
-    -moz-transition: all 200ms linear;
-    -o-transition: all 200ms linear;
-    -ms-transition: all 200ms linear;
-    transition: all 200ms linear;
-}
-
 .feature-description.hovered {
 	height: 65px;
+	color: white;
 }
 
-.feature-description.hovered > p {
-	color: white;
+.feature-description > p {
+	font-size: 15px;
 }
 
 .feature-icon {
@@ -788,28 +873,428 @@ nav.scrolled > ul > li > a {
 }
 
 #data {
-	background-image: url('fi-graph-trend.svg');
+	background-image: url('../icons/fi-graph-trend.svg');
 }
 
 #requests {
-	background-image: url('fi-results-demographics.svg');
+	background-image: url('../icons/fi-results-demographics.svg');
 }
 
 #realtime {
-	background-image: url('fi-widget.svg'); 
+	background-image: url('../icons/fi-widget.svg'); 
 }
 
 #dashboard {
-	background-image: url('fi-graph-bar.svg');
+	background-image: url('../icons/fi-graph-bar.svg');
 }
 
 #auto {
-	background-image: url('fi-check.svg');
+	background-image: url('../icons/fi-check.svg');
 }
 
 #reports {
-	background-image: url('fi-page-export.svg');
+	background-image: url('../icons/fi-page-export.svg');
 }
 
- 
+.email-section {
+	height: 250px;
+	width: 100%;
+	background-color: white;
+	background-position: 50% 50%;
+	padding-top: 50px;
+}
+
+.email-section-container {
+	width: 980px;
+	height: 150px;
+	/*border: 1px solid black;*/
+	overflow: hidden;
+	margin: 0 auto;
+	padding-top: 55px;
+	padding-right: 10px;
+	padding-left: 23px;
+}
+
+.email-section-container > h3 {
+	font-family: Source Sans Pro;
+	color: #3ABF70;
+	font-size: 25px;
+	float: left;
+}
+
+#email-section-input {
+	width: 480px;
+	float: right;
+}
+
+#email-input {
+	background-color: transparent;
+	border: 3px solid #3ABF70; 
+	box-shadow: none;
+	color:  #3ABF70;
+	font-family: Source Sans Pro;
+	font-size: 25px;
+	margin-top: -5px;
+	height: 50px;
+}
+
+#email-submit-button {
+	background-color: #3ABF70;
+	border: 3px solid #3ABF70;
+	font-family: Source Sans Pro;
+	font-size: 20px;
+	margin-left: -1px;
+	margin-top: -5px;
+	height: 50px;
+	padding-top: 3px;
+	width: 88px;
+}
+
+#email-submit-button:hover {
+	color: black;
+}
+
+.email-confirmation-container {
+	height: 50px;
+	width: 800px;
+	float: right;
+	display: inline;
+	clear: both;
+	margin: -30px -1300px 0 0;
+	-webkit-transition: margin 200ms linear;
+    -moz-transition: margin 200ms linear;
+    -o-transition: margin 200ms linear;
+    -ms-transition: margin 200ms linear;
+    transition: margin 200ms linear;
+}
+
+.email-confirmation-container.clicked {
+	margin: -30px 60px 0 0;
+}
+
+.email-confirmation-container > p {
+	font-family: Source Sans Pro;
+	font-size: 30px;
+	color: #3ABF70;
+}
+
+footer > h2 {
+	font-family: Source Sans Pro;
+	text-align: center;
+	margin-top: 20px;
+}
+
+footer > h2 > a {
+	color: #3ABF70;
+}
+
+footer {
+	background: linear-gradient(180deg, #ffffff, #f2f2f2);
+}
+
+.twitter-icon {
+	height: 70px;
+	width: 70px;
+	margin: 0 auto;
+	background-image: url('fi-social-twitter.svg');
+	background-size: cover;
+}
+
+.tweet {
+	margin: 0 auto;
+	padding-top: 20px;
+	height: 150px;
+	width: 500px;
+	font-family: Source Sans Pro;
+	font-size: 20px;
+	color: #3ABF70;
+	text-align: center;
+}
+
+.footer-info {
+	height: 50px;
+	width: 100%;
+	background-color: black;
+	padding-top: 10px;
+}
+
+.footer-info > p {
+	color: #3ABF70;
+	font-family: Source Sans Pro;
+	text-align: center;
+	margin-bottom: -10px;
+	margin-left: 20px;
+	float: left;
+	font-size: 18px;
+}
+
+.footer-links > li {
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+}
+
+.footer-links > li > a {
+	color: #3ABF70;
+	font-family: Source Sans Pro;
+	font-size: 18px;
+}
+
+.footer-links > li > a:hover {
+	color: white;
+}
+
+/* responsive section */
+
+@media (max-width:500px) {
+
+	nav {
+		height: 70px;
+		padding-left: 15px;
+		padding-top: 15px;
+	}
+
+	nav > ul {
+		margin: 3px 0 0 150px; 
+	}
+
+	nav > ul > li {
+		margin-right: 10px;
+	}
+
+	.logo {
+		height: 35px;
+		width: 135px;
+		float: left;
+	}
+	
+	.home-page-image > header {
+		margin: 0 auto;
+		width: 350px;
+	}
+
+	.home-page-image > header > h1 {
+		line-height: 40px;
+		font-size: 2.25em;
+	}
+
+	.test-go-moment-container {
+		height: 180px;
+		width: 350px;
+		margin: 15px auto 0 auto;
+	}
+
+	#test-go-moment {
+		width: 300px;
+		margin-left: 10px;
+	}
+
+	#test-go-moment-input {
+		font-size: 16px;	
+	}
+
+	.call-to-action {
+		width: 350px;
+		margin: 10px auto 0 auto;
+	}
+
+	.call-to-action.clicked {
+		margin: 10px 0 0 -380px;
+	}
+
+	.call-to-action > p {
+		font-size: 30px;
+	}
+
+	.test-confirmation-container {
+		width: 350px;
+		margin: -90px -350px 0 0;
+	}
+
+	.test-confirmation-container.clicked {
+		margin: -90px -22px 0px 0px;
+	}
+
+	.test-confirmation-container > p {
+		font-size: 21px;
+	}
+
+	.product-overview {
+		width: 370px;
+		margin-top: 70px;
+	}
+
+	.product-overview > header > h2 {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.product-overview > p {
+		width: 350px;
+		font-size: 18px;
+		line-height: 20px;
+		margin-top: 10px;
+	}
+
+	.product-section {
+		height: 900px;
+	}
+
+	.learn-more {
+		height: 60px;
+	}
+
+	#learn-more-1 {
+		padding-top: 10px;
+	}
+
+	#myModal2 {
+		width: 350px;
+		height: 400px
+	}
+
+	#myModal1 {
+		width: 350px;
+		height: 400px;
+		margin: 0 auto;
+	}
+
+	.modal-selling-points > h1 {
+		font-size: 1.75em;
+	}
+
+	#modal-submit {
+		margin-top: 460px; 
+		width: 288px;
+	}
+
+	.iphone-image {
+		width: 350px;
+		margin-left: -150px;
+	}
+
+	.iphone-gomoment-image {
+		margin: -521px 0 0 -80px;
+	}
+
+	.iphone-gomoment-demo-overlay {
+		margin: -402px 0 0 -80px;
+	}
+
+	#sell-container {
+		width: 370px;
+	}
+
+	#sell-point-1 {
+		margin: 110px 0 0 -140px;
+		width: 350px;
+	}
+
+	#product-section-2 {
+		height: 625px;
+	}
+
+	.imac-image {
+		height: 280px;
+		width: 380px;
+		margin: -25px 0 0 15px;
+	}
+
+	.imac-gomoment-image {
+		height: 220px;
+		width: 335px;
+		margin: -268px 0 0 30px;
+	}
+
+	.imac-gomoment-demo-overlay {
+		height: 190px;
+		width: 322px;
+		margin: -270px 0 0 30px;
+	}
+
+	#sell-point-2 {
+		width: 350px;
+		margin: 110px 0 0 10px;
+	}
+
+	.logo-container {
+		width: 63%;
+		height: 400px;
+	}
+
+	.logo-container > ul {
+		width: 90%;
+		margin-top: -5px;
+	}
+
+	.email-section-container {
+		width: 350px;
+		height: 250px;
+		text-align: center;
+	}
+
+	#email-section-input {
+		width: 350px;
+		float: right;
+	}
+
+	#email-submit-button {
+		padding-right: 10px;
+	}
+
+	.email-confirmation-container {
+		height: 50px;
+		width: 350px;
+		margin: -30px -400px 0 0;
+	}
+
+	.email-confirmation-container.clicked {
+		margin: -30px -10px 0 0;
+	}
+
+	.email-confirmation-container > p {
+		font-size: 25px;
+	}
+
+	.tweet {
+		padding-top: 20px;
+		height: 150px;
+		width: 350px;
+		font-size: 18px;
+	}
+
+	.footer-info {
+		height: 70px;
+		width: 100%;
+		background-color: black;
+		padding-top: 10px;
+	}
+
+	.footer-info > p {
+		margin-left: 45px;
+		font-size: 15px;
+	}
+
+	.footer-links {
+		margin: 25px 0 0 70px;
+	}
+
+	.footer-links > li {
+		display: inline-block;
+		float: left;
+		margin-right: 10px;
+	}
+
+	.footer-links > li > a {
+		color: #3ABF70;
+		font-family: Source Sans Pro;
+		font-size: 15px;
+	}
+
+}
+
+
+
+
+
 

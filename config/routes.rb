@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  # root 'home_pages#index'
+  root 'home_pages#index'
 
-  root :to => redirect('/assets/gomomenthome/index2.html')
+  # root :to => redirect('/assets/gomomenthome/index2.html')
 
   get '/contacts', to: 'contacts#new'
   post '/send_email' => 'contacts#send_email'

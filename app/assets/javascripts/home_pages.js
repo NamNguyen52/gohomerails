@@ -1,4 +1,4 @@
-// nav scroll animation fadein/fadeout
+// nav scroll fadein/fadeout 
 $(document).scroll(function(){
     var y = $(this).scrollTop();
 
@@ -10,132 +10,108 @@ $(document).scroll(function(){
 
 });
 
-// page load animations and scroll animation triggers
+// hero, product images, and product feature animations
 $(document).ready(function(){
-	$('#hero-header').animate({'opacity':'1', 'margin-top':'150px'}, 700);
+  $('#hero-header').animate({'opacity':'1', 'margin-top':'150px'}, 700);
 
-	setTimeout(function() {
+  setTimeout(function() {
       $('.test-go-moment-container').animate({'opacity':'1', 'margin-top':'65px'}, 500);
-	}, 1700);
-
-  $('.sell-point-container').addClass('hidden').viewportChecker({
-    classToAdd: 'visible animated fadeInLeft',
-    offset: 100
-  });
+  }, 1700);
 });
 
-$(document).ready(function() {
-  function filterPath(string) {
-  return string
-    .replace(/^\//,'')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-    .replace(/\/$/,'');
+$("#test-go-moment-submit").click(function(){
+
+  if ($('#test-go-moment-input').val() != "") {
+
+    setTimeout(function(){
+      $('.test-confirmation-container').toggleClass('clicked');
+    },200);
+    $('.call-to-action').toggleClass('clicked');
+    $('#test-go-moment').animate({'margin-left':'-400px'}, 200);
+
+  } else {
+
+    var inputBox = document.getElementById('test-go-moment-input');
+    inputBox.placeholder = "Please enter cell number!";
+    inputBox.style.borderColor = 'red';
+
   }
-  var locationPath = filterPath(location.pathname);
-  var scrollElem = scrollableElement('html', 'body');
- 
-  $('a[href*=#]').each(function() {
-    var thisPath = filterPath(this.pathname) || locationPath;
-    if (  locationPath == thisPath
-    && (location.hostname == this.hostname || !this.hostname)
-    && this.hash.replace(/#/,'') ) {
-      var $target = $(this.hash), target = this.hash;
-      if (target) {
-        var targetOffset = $target.offset().top;
-        $(this).click(function(event) {
-          event.preventDefault();
-          $(scrollElem).animate({scrollTop: targetOffset}, 1000, function() {
-            location.hash = target;
-          });
-        });
-      }
-    }
-  });
- 
-  function scrollableElement(els) {
-    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-      var el = arguments[i],
-          $scrollElement = $(el);
-      if ($scrollElement.scrollTop()> 0) {
-        return el;
-      } else {
-        $scrollElement.scrollTop(1);
-        var isScrollable = $scrollElement.scrollTop()> 0;
-        $scrollElement.scrollTop(0);
-        if (isScrollable) {
-          return el;
-        }
-      }
-    }
-    return [];
-  }
+
 });
 
-// form data capture for first modal dropdown
-function prepInfo1() {
-	var name = document.getElementById('name1').value;
-	var email = document.getElementById('email1').value;
-	var emailObj = 	{ guest_name: name,
-					  guest_email: email		
-					}
-	sendEmail(emailObj);
-}
+$("#email-submit-button").click(function(){
 
-// form data capture for second modal dropdown
-function prepInfo2() {
-	var name = document.getElementById('name2').value;
-	var email = document.getElementById('email2').value;
-	var emailObj = 	{ guest_name: name,
-					  guest_email: email		
-					}
-	sendEmail(emailObj);
-}
+  if ($('#email-input').val() != "") {
 
-// jQuery AJAX POST form data to mailer
-function sendEmail(emailObj) {
-	$.ajax({
-		type: 'POST',
-		url: '/send_email',
-		data: emailObj,
-		success: function(json) {
-			console.log('success');
-		},
-		failure: function() {
-			console.log('failure');
-		}
-	});
-}
+    $('#email-input').animate({'margin-left':'-1000px'}, 200);
+    $('#email-submit-button').animate({'margin-left':'-1200px'}, 200);
+    $('#email-call-action').animate({'margin-left':'-1000px'}, 200);
+
+    setTimeout(function(){
+      $('.email-confirmation-container').toggleClass('clicked');
+    }, 300);
+
+  } else {
+
+    var emailInput = document.getElementById('email-input');
+    emailInput.placeholder = "Please enter email!";
+    emailInput.style.borderColor = "red";
+
+  }
+
+});
+
+$(".feature-container").hover(function(){
+
+  $(this).children("div.feature-description").toggleClass("hovered");
+});
 
 function testGo() {
-	var guestNumber = document.getElementById('test-go-moment-input').value;
-	$.ajax({
-		method: 'POST',
-		url: 'http://rev1.gomoment.com/app/guests',
-		data: "guest[mobile_number]=" + guestNumber + "&guest[name]=homepage&visit[hotel_id]=100",
-		success: function() {
-			console.log('success');
+  var guestNumber = document.getElementById('test-go-moment-input').value;
+  $.ajax({
+    method: 'POST',
+    url: 'http://revone-staging.herokuapp.com/app/guests',
+    data: "guest[mobile_number]=" + guestNumber + "&guest[name]=test&visit[hotel_id]=2",
+    success: function() {
+      console.log('success');
       document.getElementById('test-go-moment-input').value="Thank You!"
-		},
-		failure: function() {
-			console.log('fail');
-		}
-	});
+    },
+    failure: function() {
+      console.log('fail');
+    }
+  });
 }
 
+ $(document).ready(function(){
+  var cb = new Codebird;
+    cb.setConsumerKey(
+        "c24MYuRlBhQDtvtLeV29SIsg6", 
+        "GHw4g6Jtoir3LFXXjexTReMZGfvGhIvQ7Wkr6OYaJao09pay5X"
+      );
+    cb.setToken(
+      "46941458-cisCoyQUA7ZVjONfoXIJrphUAYSmVQtBlMtsbWlRt", 
+      "4g7PmoBi7SIqM5bImGbyCK6qTwtYA6Q89r6qxCZ4EHN13"
+      );
 
+  var params = {
+    screen_name: "GoMoment"
+  };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  cb.__call(
+    "statuses_userTimeline",
+    params,
+    function (reply) {
+        console.log(reply);
+        var tweetDiv1 = document.getElementById('recent-tweet1');
+        var tweetDiv2 = document.getElementById('recent-tweet2');
+        var tweetDiv3 = document.getElementById('recent-tweet3');
+        var tweetDiv4 = document.getElementById('recent-tweet4');
+        var tweetDiv5 = document.getElementById('recent-tweet5'); 
+        tweetDiv1.innerHTML = reply[0].text;
+        tweetDiv2.innerHTML = reply[1].text;
+        tweetDiv3.innerHTML = reply[2].text;
+        tweetDiv4.innerHTML = reply[3].text;
+        tweetDiv5.innerHTML = reply[4].text;
+    }
+  );
+});

@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Go Moment</title>
   </head>
-  <body>  
+  <body>
   <div class="home-page-container">
     <div class="home-page-image">
       <nav>
@@ -12,12 +12,11 @@
           <li><a href="#about">About</a></li>
           <li><a href="#product">Product</a></li>
           <li><a href="#clients">Clients</a></li>
-          <li><a href="#features">Features</a></li>
         </ul>
       </nav>
       <header id="hero-header">
-        <h1>"This brings us closer than ever to our guests"</h1>
-        <h5>-Area General Manager</h5>
+        <h1>Engage & Serve Guests
+          Automatically</h1>
       </header>
       <div class="test-go-moment-container">
         <div class="call-to-action">
@@ -27,13 +26,16 @@
           <div class="large-12 columns">
             <div class="row collapse">
               <div class="small-9 columns">
-                <input type="text" id="test-go-moment-input" placeholder="Enter your number" />
+                <input type="text" id="test-go-moment-input" placeholder="555-555-5555" />
               </div>
               <div class="small-3 columns">
-                <span class="postfix" id="test-go-moment-submit" onclick="testGo()"><a href="#">Show Me</a></span>
+                <span class="postfix" id="test-go-moment-submit" onclick=testGo()><a href="#">Text Me</a></span>
               </div>
             </div>
           </div>
+        </div>
+        <div class="test-confirmation-container">
+          <p>Thank you. Check your cell phone!</p>
         </div>
       </div>
     </div>
@@ -42,34 +44,19 @@
   <div class="product-summary">
     <div class="product-overview">
       <header>
-        <h2>Put more heads in beds, on autopilot.</h2>
+        <h2>Increase Guest Loyalty On Autopilot</h2>
       </header>
-      <p>Reach and delight guests instantly.</p>
+      <p>Delight guests with instant service without tying up your staff</p>
     </div>
-    <div id="product"></div>
-  </div>
-  <div class="product-section">
-    <div class="sell-point-container" id="sell-container">
-      <div class="iphone-image"></div>
-      <div class="iphone-gomoment-image"></div>
-      <div class="iphone-gomoment-demo-overlay" data-reveal-id="myModal1">
-        <p id="demo-overlay-1">Request A Demo</p>
-      </div>
-      <div class="sell-point" id="sell-point-1">
-        <header>
-          <h2>Communicate Simply</h2>
-        </header>
-        <p>Measurably improve guest satisfaction and promote loyalty.</p>
-      </div>
-    </div>
-    <div class="learn-more" id="learn-more-1">
-      <a href="#" data-reveal-id="myModal1">Request A Demo</a>
-    </div>
+      <a href="#" data-reveal-id="myModal1" >
+        <div class="learn-more" id="learn-more-1">Request A Demo
+        </div>
+      </a>
     <div id="myModal1" class="reveal-modal" data-reveal>
       <div class="modal-selling-points">
-        <h1>Ready to increase RevPAR on autopilot?</h1>
+        <h1>Ready to increase guest loyalty on autopilot?</h1>
         <ul>
-          <li>Increase guest loyalty</li>
+          <li>Increase RevPAR</li>
           <li>Improve guest satisfaction</li>
           <li>Beat the competition on TripAdvisor</li>
         </ul>
@@ -80,7 +67,7 @@
             <span id="modal-label" class="prefix">Name</span>
           </div>
           <div class="small-9 large-10 columns">
-            <input type="text" id="name1" placeholder="Enter your full name...">
+            <input type="text" id="name1" placeholder="Full name...">
           </div>
         </div>
         <div class="row collapse">
@@ -88,15 +75,33 @@
             <span id="modal-label" class="prefix">Email</span>
           </div>
           <div class="small-9 large-10 columns">
-            <input type="text" id="email1" placeholder="Enter your email...">
+            <input type="text" id="email1" placeholder="Your email...">
           </div>
         </div>
         <a onClick="prepInfo1()" href="#" class="button expand close-reveal-modal" id="modal-submit">Request Demo</a>
         <a class="close-reveal-modal">&#215;</a>
       </form>
     </div>
+    <div id="product"></div>
   </div>
   <div class="product-section">
+    <div class="sell-point-container" id="sell-container">
+      <div class="iphone-image"></div>
+      <div class="iphone-gomoment-image"></div>
+      <div class="iphone-gomoment-demo-overlay" data-reveal-id="myModal1">
+        <a href="#">
+          <p id="demo-overlay-1">Request A Demo</p>
+        </a>
+      </div>
+      <div class="sell-point" id="sell-point-1">
+        <header>
+          <h2>Communicate Simply</h2>
+        </header>
+        <p>"Guests would rather text us than <br/>download yet another app."<br/>- Area Front Desk Manager</p>
+      </div>
+    </div>
+  </div>
+  <div class="product-section" id="product-section-2">
     <div class="sell-point-container">
       <div class="imac-image"></div>
       <div class="imac-gomoment-image" id="imac-gomoment-image-2"></div>
@@ -104,20 +109,41 @@
         <header>
           <h2>Drive Results with Go Moment</h2>
         </header>
-        <p id="sell-point-p-2">Automated guest service personalization, improve your guest experience, and unlock new revenue.</p>
+        <p id="sell-point-p-2">Track your guest experience. <br /> Unlock new revenue.</p>
       </div>
       <div class="imac-gomoment-demo-overlay" data-reveal-id="myModal2">
-        <p>Request A Demo</p>
+        <a href="#">
+          <p>Request A Demo</p>
+        </a>
       </div>
     </div>
-    <div class="learn-more" id="learn-more-2">
-        <a href="#" data-reveal-id="myModal2">Request A Demo</a>
+  </div>
+  <div id="clients"></div>
+  <div class="clients-section">
+    <header>
+      <h2>Trusted by leading hotels & brands</h2>
+    </header>
+    <div class="logo-container">
+      <ul>
+        <li id="line-size"></li>
+        <li id="sheraton-size"></li>
+        <li id="fairfield-size"></li>
+        <li id="best-west-size"></li>
+        <li id="wyndham-size"></li>
+      </ul>
+      <ul id="logo-second-row">
+        <li id="crowne-size"></li>
+        <li id="hilton-size"></li>
+        <li id="embassy-size"></li>
+        <li id="double-tree-size"></li>
+        <li id="hampton-size"></li>
+      </ul>
     </div>
     <div id="myModal2" class="reveal-modal" data-reveal>
       <div class="modal-selling-points">
-        <h1>Ready to increase RevPAR on autopilot?</h1>
+        <h1>Ready to increase guest loyalty on autopilot?</h1>
         <ul>
-          <li>Increase guest loyalty</li>
+          <li>Increase RevPAR</li>
           <li>Improve guest satisfaction</li>
           <li>Beat the competition on TripAdvisor</li>
         </ul>
@@ -144,131 +170,207 @@
       </form>
     </div>
   </div>
-  <div id="clients"></div>
-  <div class="clients-section">
-    <header>
-      <h2>Trusted by leading hotels & brands</h2>
-    </header>
-    <div class="logo-container">
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <ul id="logo-second-row">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>  
-  </div>
-  <div id="features"></div>
-  <div class="product-section">
-    <header class="product-feature-header">
-      <h2>Product Features</h2>
-    </header>
-    <div class="product-features-container">
-      <ul class="small-block-grid-3">
-        <li>
-          <div class="feature-container">
-            <div class="feature-description">
-              <p>Rich Guest Data</p>
-              <div class="feature-icon" id="data"></div>
+  <div class="email-section">
+    <div class="email-section-container">
+      <h3 id="email-call-action">Email me a complete list of product features:</h3>
+      <div class="row" id="email-section-input">
+        <div class="large-12 columns">
+          <div class="row collapse">
+            <div class="small-10 columns">
+              <input type="text" id="email-input" placeholder="email@example.com">
+            </div>
+            <div class="small-2 columns" id="email-submit-text">
+              <a href="#nogo" id="email-submit-button"class="button postfix">Submit</a>
             </div>
           </div>
-        </li>
-        <li>
-          <div class="feature-container">
-            <div class="feature-description">
-              <p>Request Tracking</p>
-              <div class="feature-icon" id="requests"></div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="feature-container">
-            <div class="feature-description">
-              <p>Real Time Feedback</p>
-              <div class="feature-icon" id="realtime"></div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <ul class="small-block-grid-3">
-        <li>
-          <div class="feature-container">
-            <div class="feature-description">
-              <p>Dashboard Analytics</p>
-              <div class="feature-icon" id="dashboard"></div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="feature-container">
-            <div class="feature-description">
-              <p>Automated Communication</p>
-              <div class="feature-icon" id="auto"></div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="feature-container">
-            <div class="feature-description">
-              <p>Robust Reports</p>
-              <div class="feature-icon" id="reports"></div>
-            </div>
-          </div>
-        </li>
-      </ul>
+        </div>
+      </div>
+      <div class="email-confirmation-container">
+        <p>The keys to building guest loyalty will soon be in your inbox.</p>
+      </div>
     </div>
   </div>
-
   <footer>
-    <h2><a href="https://twitter.com/gomoment" target="_blank">@GoMoment</a></h2>
+     <h2><a href="https://twitter.com/gomoment" target="_blank">@GoMoment</a></h2>
     <div class="twitter-icon"></div>
     <ul class="example-orbit" data-orbit>
-      <% @tweets.each do |t| %>
       <li>
-        <div class="tweet">
-          <%= t.text %>
-        </div>
+        <div class="tweet" id="recent-tweet1"></div>
       </li>
-      <% end %>
+      <li>
+        <div class="tweet" id="recent-tweet2"></div>
+      </li>
+      <li>
+        <div class="tweet" id="recent-tweet3"></div>
+      </li>
+      <li>
+        <div class="tweet" id="recent-tweet4"></div>
+      </li>
+      <li>
+        <div class="tweet" id="recent-tweet5"></div>
+      </li>
     </ul>
     <div class="footer-info">
-      <p>GoMoment 2015</p>
-    </div>    
+      <p>©2015 Go Moment | Unforgettable Experiences</p>
+      <ul class="footer-links">
+        <li>
+          <a target="_blank" href="http://www.gomoment.com/contact/">Contact Us</a>
+        </li>
+        <li><a target="_blank" href="http://www.gomoment.com/about/">About Us</a>
+        </li>
+        <li>
+          <a target="_blank" href="http://www.gomoment.com/privacy/">Privacy</a>
+        </li>
+        <li>
+          <a target="_blank" href="http://www.gomoment.com/terms/">Terms</a>
+        </li>
+       <!--  <li>
+          <a target="_blank" href="https://jobs-gomoment.icims.com/jobs/intro">Careers</a>
+        </li> -->
+      </ul>
+    </div>
   </footer>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/viewportchecker.js"></script>
+    <script src="js/codebird.js"></script>
+    <script>
+      $(document).foundation({
+        orbit: {
+          bullets: false,
+          timer_speed: 7000,
+          slide_number: false,
+          pause_on_hover: false,
+          navigation_arrows: false,
+          resume_on_mouseout: true,
+          timer: true
+        }
+      });
 
-  <script>
+      // nav scroll fadein/fadeout 
+$(document).scroll(function(){
+    var y = $(this).scrollTop();
 
-  $(".feature-container").hover(function(){
-
-    $(this).children("div.feature-description").toggleClass("hovered");
-  });
-
-  $(document).foundation({
-      orbit: {
-            timer_speed: 7000,
-            slide_number: false,
-            pause_on_hover: false,
-            navigation_arrows: false,
-            resume_on_mouseout: true,
-            timer: true,
-            bullets: false
-          }
-    });
-
-  </script>
-
-  <style>
-    .reveal-modal-bg {
-      position: fixed;
+    if (y > 10) {
+      $('nav').addClass("scrolled");
+    } else {
+      $('nav').removeClass("scrolled");
     }
-  </style>
-    
+
+});
+
+// hero, product images, and product feature animations
+$(document).ready(function(){
+  $('#hero-header').animate({'opacity':'1', 'margin-top':'150px'}, 700);
+
+  setTimeout(function() {
+      $('.test-go-moment-container').animate({'opacity':'1', 'margin-top':'65px'}, 500);
+  }, 1700);
+});
+
+$("#test-go-moment-submit").click(function(){
+
+  if ($('#test-go-moment-input').val() != "") {
+
+    setTimeout(function(){
+      $('.test-confirmation-container').toggleClass('clicked');
+    },200);
+    $('.call-to-action').toggleClass('clicked');
+    $('#test-go-moment').animate({'margin-left':'-400px'}, 200);
+
+  } else {
+
+    var inputBox = document.getElementById('test-go-moment-input');
+    inputBox.placeholder = "Please enter cell number!";
+    inputBox.style.borderColor = 'red';
+
+  }
+
+});
+
+$("#email-submit-button").click(function(){
+
+  if ($('#email-input').val() != "") {
+
+    $('#email-input').animate({'margin-left':'-1000px'}, 200);
+    $('#email-submit-button').animate({'margin-left':'-1200px'}, 200);
+    $('#email-call-action').animate({'margin-left':'-1000px'}, 200);
+
+    setTimeout(function(){
+      $('.email-confirmation-container').toggleClass('clicked');
+    }, 300);
+
+  } else {
+
+    var emailInput = document.getElementById('email-input');
+    emailInput.placeholder = "Please enter email!";
+    emailInput.style.borderColor = "red";
+
+  }
+
+});
+
+$(".feature-container").hover(function(){
+
+  $(this).children("div.feature-description").toggleClass("hovered");
+});
+
+function testGo() {
+  var guestNumber = document.getElementById('test-go-moment-input').value;
+  $.ajax({
+    method: 'POST',
+    url: 'http://revone-staging.herokuapp.com/app/guests',
+    data: "guest[mobile_number]=" + guestNumber + "&guest[name]=test&visit[hotel_id]=2",
+    success: function() {
+      console.log('success');
+      document.getElementById('test-go-moment-input').value="Thank You!"
+    },
+    failure: function() {
+      console.log('fail');
+    }
+  });
+}
+
+ $(document).ready(function(){
+  var cb = new Codebird;
+    cb.setConsumerKey(
+        "c24MYuRlBhQDtvtLeV29SIsg6", 
+        "GHw4g6Jtoir3LFXXjexTReMZGfvGhIvQ7Wkr6OYaJao09pay5X"
+      );
+    cb.setToken(
+      "46941458-cisCoyQUA7ZVjONfoXIJrphUAYSmVQtBlMtsbWlRt", 
+      "4g7PmoBi7SIqM5bImGbyCK6qTwtYA6Q89r6qxCZ4EHN13"
+      );
+
+  var params = {
+    screen_name: "GoMoment"
+  };
+
+  cb.__call(
+    "statuses_userTimeline",
+    params,
+    function (reply) {
+        console.log(reply);
+        var tweetDiv1 = document.getElementById('recent-tweet1');
+        var tweetDiv2 = document.getElementById('recent-tweet2');
+        var tweetDiv3 = document.getElementById('recent-tweet3');
+        var tweetDiv4 = document.getElementById('recent-tweet4');
+        var tweetDiv5 = document.getElementById('recent-tweet5'); 
+        tweetDiv1.innerHTML = reply[0].text;
+        tweetDiv2.innerHTML = reply[1].text;
+        tweetDiv3.innerHTML = reply[2].text;
+        tweetDiv4.innerHTML = reply[3].text;
+        tweetDiv5.innerHTML = reply[4].text;
+    }
+  );
+});
+    </script>
+
+    <style>
+      .reveal-modal-bg {
+        position: fixed;
+      }
+    </style>
   </body>
