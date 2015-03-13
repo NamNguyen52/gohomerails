@@ -173,11 +173,11 @@ nav.scrolled > ul > li > a {
 	width: 100px;
 }
 
-#test-go-moment-submit > a {
+#test-submit > #test-go-moment-submit {
 	color: white;
 }
 
-#test-go-moment-submit > a:hover {
+#test-submit > #test-go-moment-submit:hover {
 	color: black;
 }
 
@@ -292,7 +292,7 @@ nav.scrolled > ul > li > a {
 	height: 402px;
 	width: 225px;
 	margin: -521px 0 0 20px;
-	background-image: url('gochat2.gif');
+	background-image: url('gochat4.gif');
 	background-size: contain;
 	opacity: 1;
 }
@@ -1026,6 +1026,10 @@ footer {
 	margin-left: 20px;
 	float: left;
 	font-size: 18px;
+}
+
+.footer-info > p > span {
+	color: silver;
 }
 
 .footer-links > li {
