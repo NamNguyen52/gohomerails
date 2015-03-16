@@ -365,7 +365,7 @@ function testGo() {
   var guestNumber = document.getElementById('test-go-moment-input').value;
   $.ajax({
     method: 'POST',
-    url: 'https://revone-staging.herokuapp.com/app/guests',
+    url: 'https://revone-staging.herokuapp.com/app/guests/home_page',
     data: "guest[mobile_number]=" + guestNumber + "&guest[name]=test&visit[hotel_id]=2",
     success: function() {
       console.log('success');
