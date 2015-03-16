@@ -153,11 +153,19 @@ function testGo() {
 //   }
 // });
 
-$('#name1').keydown(function(e){
+$('#form1').keydown(function(e){
   var key = e.which;
 
   if(key == 13 && $('#name1').val() != "" && $('#email1').val() != "") {
-    $('#')
+    $('#modal-submit').click();
+  }
+});
+
+$('#form2').keydown(function(e){
+  var key = e.which;
+
+  if(key == 13 && $('#name1').val() != "" && $('#email1').val() != "") {
+    $('#modal-submit').click();
   }
 });
 
