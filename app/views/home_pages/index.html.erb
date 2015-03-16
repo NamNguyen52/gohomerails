@@ -15,8 +15,8 @@
         </ul>
       </nav>
       <header id="hero-header">
-        <h1>Engage & Serve Guests<br/><b>
-          Automatically</b></h1>
+        <h1>Stop Bad Reviews<br/><b>
+          Before They're Written</b></h1>
       </header>
       <div class="test-go-moment-container">
         <div class="call-to-action">
@@ -290,6 +290,27 @@ $("#test-go-moment-submit").click(function(){
 
 });
 
+$("#test-go-moment-input").keydown(function(e){
+  var key = e.which;
+
+  if(key == 13 && $('#test-go-moment-input').val() != "") {
+
+    $('#test-go-moment-input').submit();
+      setTimeout(function(){
+      $('.test-confirmation-container').toggleClass('clicked');
+    },200);
+    $('.call-to-action').toggleClass('clicked');
+    $('#test-go-moment').animate({'margin-left':'-400px'}, 200);
+
+  } else {
+
+    var inputBox = document.getElementById('test-go-moment-input');
+    inputBox.placeholder = "Please enter cell number!";
+    inputBox.style.borderColor = 'red';
+
+  }
+});
+
 $("#email-submit-button").click(function(){
 
   if ($('#email-input').val() != "") {
@@ -312,6 +333,29 @@ $("#email-submit-button").click(function(){
 
 });
 
+$("#email-input").keydown(function(e){
+  var key = e.which;
+  if (key == 13 && $('#email-input').val() != "") {
+
+    $("#email-input").submit();
+
+    $('#email-input').animate({'margin-left':'-1000px'}, 200);
+    $('#email-submit-button').animate({'margin-left':'-1200px'}, 200);
+    $('#email-call-action').animate({'margin-left':'-1000px'}, 200);
+
+    setTimeout(function(){
+      $('.email-confirmation-container').toggleClass('clicked');
+    }, 300);
+
+  } else {
+    
+    var emailInput = document.getElementById('email-input');
+    emailInput.placeholder = "Please enter email!";
+    emailInput.style.borderColor = "red";
+
+  }
+});
+
 $(".feature-container").hover(function(){
 
   $(this).children("div.feature-description").toggleClass("hovered");
@@ -321,7 +365,7 @@ function testGo() {
   var guestNumber = document.getElementById('test-go-moment-input').value;
   $.ajax({
     method: 'POST',
-    url: 'http://revone-staging.herokuapp.com/app/guests',
+    url: 'https://revone-staging.herokuapp.com/app/guests',
     data: "guest[mobile_number]=" + guestNumber + "&guest[name]=test&visit[hotel_id]=2",
     success: function() {
       console.log('success');

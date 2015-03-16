@@ -61,6 +61,27 @@ $("#email-submit-button").click(function(){
 
 });
 
+$("#email-submit-button").keydown(function(){
+  var key = e.which;
+  if (key == 13 && $('#email-input').val() != "") {
+
+    $('#email-input').animate({'margin-left':'-1000px'}, 200);
+    $('#email-submit-button').animate({'margin-left':'-1200px'}, 200);
+    $('#email-call-action').animate({'margin-left':'-1000px'}, 200);
+
+    setTimeout(function(){
+      $('.email-confirmation-container').toggleClass('clicked');
+    }, 300);
+
+  } else {
+
+    var emailInput = document.getElementById('email-input');
+    emailInput.placeholder = "Please enter email!";
+    emailInput.style.borderColor = "red";
+
+  }
+});
+
 $(".feature-container").hover(function(){
 
   $(this).children("div.feature-description").toggleClass("hovered");
@@ -115,3 +136,36 @@ function testGo() {
     }
   );
 });
+
+// $('#myModal1').keydown(function(e){
+//   var key = e.which;
+
+//   if(key == 13 && $('#name1').val() != "" && $('#email1').val() != "") {
+//     $('#modal-submit').submit();
+//   } 
+// });
+
+// $('#myModal2').keydown(function(e){
+//   var key = e.which;
+
+//   if(key == 13 && $('#name2').val() != "" && $('#email2').val() != "") {
+//     $('#myModal2').submit();
+//   }
+// });
+
+$('#name1').keydown(function(e){
+  var key = e.which;
+
+  if(key == 13 && $('#name1').val() != "" && $('#email1').val() != "") {
+    $('#')
+  }
+});
+
+
+
+
+
+
+
+
+
