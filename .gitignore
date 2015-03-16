@@ -17,4 +17,3 @@
 
 /config/initializers/app_env_vars.rb
 /config/environment_variables.yml
-/config/secrets.yml
